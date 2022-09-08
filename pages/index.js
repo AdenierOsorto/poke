@@ -20,7 +20,7 @@ export default function Home({ pokemones }) {
     //   <Image src={Cafe} width={400} height={400} />
     // </div>
     <div>
-      <p>Pokemones</p>
+      <p>Mi App de Pokemones</p>
       <ul>
         {pokemones.map((poke) => (
           <Pokemon pokemon={poke} key={pokemones.name} />
