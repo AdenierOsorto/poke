@@ -6,15 +6,16 @@ import { useEffect, useState } from "react";
 const Pokemon = ({ id }) => {
     const [data, setData] = useState({})
     const router = useRouter();
-    if (router.isFallback) {
-        return <p>cargando ...</p>
-    }
     const fetchData = async () => {
         setData(await getInformation(id))
     }
     useEffect(() => {
-        fetchData()
-    }, [router.isFallback])
+        // Check if router.isFallback is false inside the hook
+        if (!router.isFallback) {
+            fetchData();
+        }
+    }, [router.isFallback]); // Add the dependency to ensure useEffect runs when router.isFallback changes
+
     return (
         <div>
             <Image src={data?.sprites?.front_default} className="bg-gray rounded-xl" width={400} height={400} />
