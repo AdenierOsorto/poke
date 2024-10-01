@@ -14,7 +14,7 @@ const Pokemon = ({ id }) => {
     }
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [router.isFallback])
     return (
         <div>
             <Image src={data?.sprites?.front_default} className="bg-gray rounded-xl" width={400} height={400} />
