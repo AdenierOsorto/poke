@@ -52,6 +52,9 @@ module.exports = {
     }
   },
   safelist: [
+    {
+      pattern: /bg-is--/,
+    },
     'is--fire',
     'is--grass',
     'is--poison',
