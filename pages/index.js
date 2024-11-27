@@ -3,7 +3,9 @@ import Link from "next/link";
 import Cafe from "../public/cafe.jpg";
 import Pokemon from "./pokemones";
 import { useRouter } from 'next/router'
-const Pokemon2 = ({ pokemon }) => {
+
+
+const ListPokemon = ({ pokemon }) => {
   const router = useRouter()
   const rediretPokemonByID = (id) => {
     router.push(`/pokemones/${id}`)
@@ -18,11 +20,13 @@ const Pokemon2 = ({ pokemon }) => {
     </div>
   );
 };
+
+
 export default function Home({ pokemones }) {
   return (
     <div className="grid grid-cols-3 px-2 gap-1 md:grid-cols-4 md:gap-4 sm:grid-cols-3">
       {pokemones.map((poke, index) => (
-        <Pokemon2 pokemon={poke} key={index} />
+        <ListPokemon pokemon={poke} key={index} />
       ))}
     </div>
   );
