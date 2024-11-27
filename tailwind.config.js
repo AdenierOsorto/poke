@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,16 +9,19 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'blue': '#1fb6ff',
-      'purple': '#7e5bef',
-      'pink': '#ff49db',
-      'orange': '#ff7849',
-      'green': '#13ce66',
-      'yellow': '#ffc82c',
-      'gray-dark': '#273444',
-      'white': '#ffffff',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      blue: colors.blue,
+      gray: colors.gray,
+      green: colors.green,
+      purple: colors.purple,
+      violet: colors.violet,
+      yellow: colors.yellow,
+      pink: colors.pink,
+      fuchsia: colors.fuchsia,
+      red: colors.red,
       'is--fire': '#be123c',
       'is--grass': '#15803d',
       'is--poison': '#6d28d9',

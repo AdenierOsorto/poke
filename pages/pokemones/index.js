@@ -16,14 +16,14 @@ const Pokemon = ({ id }) => {
     }, [router.isFallback]); // Add the dependency to ensure useEffect runs when router.isFallback changes
 
     return (
-        <div>
-            <Image src={data?.sprites?.front_default} className="bg-gray rounded-xl" width={400} height={400} />
-            <div className="grid grid-cols-2 gap-1 mb-2">
+        <div className="shadow-md bg-gray-200 rounded-xl group hover:bg-gray-400">
+            <Image src={data?.sprites?.front_default} className="bg-gray-200 rounded-xl group-hover:bg-gray-400" width={400} height={400} />
+            <div className="grid grid-cols-2 gap-1 mb-2 p-2">
                 <div className="capitalize font-bold">{data?.name}</div>
                 <div className="text-right">#{data?.id}</div>
             </div>
 
-            <div className="grid grid-cols-2 gap-1 mb-2">
+            <div className="grid grid-cols-2 gap-1 mb-2 p-2">
                 {data?.types?.map(x => {
                     const color = `bg-is--${x.type.name} text-white text-center rounded-xl px-2`;
 
